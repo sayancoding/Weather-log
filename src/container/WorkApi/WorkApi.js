@@ -25,21 +25,26 @@ class WorkApi extends Component{
         const city = e.target.city.value;
         const country = e.target.country.value;
 
-        const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
-        const data = await api_call.json();
-        
-
-        this.setState({
-            City:data.name,
-            Country:data.sys.country,
-            Temparature:data.main.temp,
-            Humidity:data.humidity,
-            Description:data.weather[0].description,
-            'wind-Speed':data.wind.speed,
-            errorStatus:'no error'
-        })
-
-        console.log(this.state);
+        if(city  && country){
+            const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
+            const data = await api_call.json();
+            
+    
+            this.setState({
+                City:data.name,
+                Country:data.sys.country,
+                Temparature:data.main.temp,
+                Humidity:data.humidity,
+                Description:data.weather[0].description,
+                'wind-Speed':data.wind.speed,
+                errorStatus:'no error'
+            })
+        }
+        else{
+            this.setState({
+                errorStatus:"Please fill above fields."
+            })
+        }
     }
 
     render() {
