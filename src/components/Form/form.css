@@ -27,12 +27,14 @@
     border-radius: 2px;
     padding: 8px 14px;
     cursor: pointer;
+    outline: none;
 }
+
 .btn:hover{
     box-shadow: 0 1px 5px rgb(49, 49, 49);
 }
 
 .btn:active{
-    background-color: rgb(29, 67, 235);
+    background-color: rgb(66, 94, 219);
     box-shadow: 0 2px 3px rgb(43, 42, 42);
 }

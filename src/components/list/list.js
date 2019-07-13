@@ -3,14 +3,16 @@ import React from 'react';
 import classes from './list.css'
 
 const list = (props) =>{
+    const listObject = Object.keys(props.listObj).map(listKey=>{
+        return <li className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
+    })
+
+    
+
     return(
-        <div>
-            <ul>
-                <li>City : {props.city},{props.country}</li>
-                <li>Temparature :{props.temp}</li>
-                <li>Humidity :{props.humidity}</li>
-                <li>Description :{props.description}</li>
-                <li>Wind Speed :{props.windSpeed}</li>
+        <div className={classes.area}>
+            <ul className={classes.ul}>
+                {listObject}
             </ul>
         </div>
     );

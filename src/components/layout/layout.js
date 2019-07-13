@@ -9,6 +9,7 @@ const layout = (props) =>{
         <div className={classes.layout}>
           <Banner/>
           <WorkApi/>
+          
         </div>
           
       </Aux>  
