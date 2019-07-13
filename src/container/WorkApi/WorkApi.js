@@ -36,7 +36,7 @@ class WorkApi extends Component{
             Humidity:data.humidity,
             Description:data.weather[0].description,
             'wind-Speed':data.wind.speed,
-            errorStatus:'no errors'
+            errorStatus:'no error'
         })
 
         console.log(this.state);
