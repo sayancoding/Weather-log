@@ -19,6 +19,7 @@ class WorkApi extends Component{
             'Wind Speed':undefined,
         },
         
+        cod:undefined,
         visibility:false,
         errorStatus:undefined
         
@@ -48,9 +49,12 @@ class WorkApi extends Component{
                 list:listRef,
                 errorStatus:'no error',
                 visibility:true,
+                cod:data.cod
             })
-            console.log(data)   
+            console.log(this.state)   
         }
+
+
 
         else{
             this.setState({
@@ -68,7 +72,7 @@ class WorkApi extends Component{
                 <div className={classes.container}>
                     <Form getUpdate={this.getWeather}/>
                     {
-                        this.state.visibility ? <List
+                        (this.state.cod===200) ? <List
                         listObj={this.state.list}
                         />:null
                     }

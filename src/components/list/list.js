@@ -4,7 +4,7 @@ import classes from './list.css'
 
 const list = (props) =>{
     const listObject = Object.keys(props.listObj).map(listKey=>{
-        return <li className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
+        return <li key={listKey} className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
     })
 
     

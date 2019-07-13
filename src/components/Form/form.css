@@ -26,11 +26,12 @@
     box-shadow: 0 1px 7px rgb(104, 104, 104);
     border-radius: 2px;
     padding: 8px 14px;
-    cursor: pointer;
+    
     outline: none;
 }
 
 .btn:hover{
+    cursor: pointer;
     box-shadow: 0 1px 5px rgb(49, 49, 49);
 }
 
