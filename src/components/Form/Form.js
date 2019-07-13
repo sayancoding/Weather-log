@@ -1,12 +1,14 @@
 import React from 'react';
+import classes from './form.css'
 
 const Form = (props) =>{
     return(
-        <div>
-            <form onSubmit={props.getUpdate}>
-                <input type="text" name="city" placeholder={'City..'}/>
-                <input type="text" name="country" placeholder={'Country..'}/>
-                <button>Get Update</button>
+        <div className={classes.formArea}>
+            <form className={classes.from} onSubmit={props.getUpdate}>
+                <div className={classes.inputArea}><input className={classes.input} type="text" name="city" placeholder={'City..'}/>
+                <input className={classes.input} type="text" name="country" placeholder={'Country..'}/>
+                </div>
+                <button className={classes.btn}>Get Update</button>
             </form>
         </div>
     );

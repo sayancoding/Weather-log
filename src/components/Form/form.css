@@ -1,0 +1,38 @@
+.form{
+    display: flex;
+}
+.formArea{
+    text-align: center;
+}
+.inputArea{
+    padding-bottom: 2rem;
+}
+.input{
+    border: none;
+    margin: 4px;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+    width: 16rem;
+    background-color: rgba(219, 230, 255, 0.966);
+    border-radius: 3px;
+    padding-left: 8px;
+}
+.btn{
+    border: none;
+    background-color: rgb(44, 80, 238);
+    color: #fff;
+    box-shadow: 0 1px 7px rgb(104, 104, 104);
+    border-radius: 2px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 1px 5px rgb(49, 49, 49);
+}
+
+.btn:active{
+    background-color: rgb(29, 67, 235);
+    box-shadow: 0 2px 3px rgb(43, 42, 42);
+}

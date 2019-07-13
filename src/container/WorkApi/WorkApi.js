@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/wrapper';
 import Form from '../../components/Form/Form'
 
+import classes from './WorkApi.css'
+
 const API_KEY ="db5d3609c1a6fb9ef5d8be98fd723ca7";
 
 class WorkApi extends Component{
@@ -13,6 +15,8 @@ class WorkApi extends Component{
         Humidity:undefined,
         Description:undefined,
         'wind-Speed':undefined,
+        errorStatus:undefined
+        
     }
 
     getWeather = async (e)=>{
@@ -40,7 +44,7 @@ class WorkApi extends Component{
     render() {
         return(
             <Aux>
-                <div>
+                <div className={classes.container}>
                     <Form getUpdate={this.getWeather}/>
                 </div>
             </Aux>
