@@ -1,11 +1,21 @@
 import React from 'react';
+import Msg from '../../components/errorMsg/errorMsg'
 
 import classes from './list.css'
 
 const list = (props) =>{
-    const listObject = Object.keys(props.listObj).map(listKey=>{
-        return <li key={listKey} className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
-    })
+    
+    let listObject = []
+
+    if(props.cod === 200){
+         listObject = Object.keys(props.listObj).map(listKey=>{
+            return <li key={listKey} className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
+        })
+    }
+    else{
+         listObject = <Msg/>
+    }
+
 
     
 
