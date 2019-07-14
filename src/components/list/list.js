@@ -15,10 +15,6 @@ const list = (props) =>{
     else{
          listObject = <Msg/>
     }
-
-
-    
-
     return(
         <div className={classes.area}>
             <ul className={classes.ul}>
