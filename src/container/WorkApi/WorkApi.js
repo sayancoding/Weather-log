@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/wrapper';
 import Form from '../../components/Form/Form'
 import List from '../../components/list/list'
-import text from '../../components/errorMsg/errorMsg'
+import Msg from '../../components/errorMsg/errorMsg'
 
 import classes from './WorkApi.css'
 
@@ -57,19 +57,9 @@ class WorkApi extends Component{
                 })
             }
 
-
+            
             console.log(this.state)   
         }
-
-
-
-        else{
-            this.setState({
-                errorStatus:"Please fill above fields."
-            })
-        }
-        
-        // const objectVal = Object.values(this.state.list)
         
     }
 
@@ -82,9 +72,14 @@ class WorkApi extends Component{
                         (this.state.cod===200) ? <List
                         listObj={this.state.list}
                         cod={this.state.cod}
+                        visibility = {this.state.visibility}
                         />:null
                     }
-              
+                 {
+                 (this.state.cod === 404) ?
+                 <Msg/>:null
+                 }
+                 
                 </div>
                 
                 

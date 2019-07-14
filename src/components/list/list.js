@@ -8,13 +8,19 @@ const list = (props) =>{
     let listObject = []
 
     if(props.cod === 200){
-         listObject = Object.keys(props.listObj).map(listKey=>{
+         listObject = (Object.keys(props.listObj).map(listKey=>{
             return <li key={listKey} className={classes.li}>{listKey} : {props.listObj[listKey]}</li>
-        })
+        }))
     }
-    else{
-         listObject = <Msg/>
-    }
+    // else{
+    //      listObject = <Msg/>
+    // }
+    // if(!props.visibility ){
+    //     listObject ="fill up"
+
+    // } 
+
+
     return(
         <div className={classes.area}>
             <ul className={classes.ul}>
