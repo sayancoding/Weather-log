@@ -9,7 +9,7 @@ const banner = (props) =>{
             <img src={bannerLogo} alt="logo"/>
             <div className={classes.text}>
                 <h1>Weather Update</h1>
-                <p>" Weather log for local and internationl's."</p>
+                <p>" Weather log for local and international's."</p>
             </div>
             
 
