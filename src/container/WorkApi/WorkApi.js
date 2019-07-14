@@ -4,6 +4,7 @@ import Form from '../../components/Form/Form'
 import List from '../../components/list/list'
 import Msg from '../../components/errorMsg/errorMsg'
 
+
 import classes from './WorkApi.css'
 
 const API_KEY ="db5d3609c1a6fb9ef5d8be98fd723ca7";
@@ -35,7 +36,7 @@ class WorkApi extends Component{
         const country = e.target.country.value;
 
         if(city  &&  country){
-            const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
+            const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
             const data = await api_call.json();
             this.setState({cod:data.cod})
         
