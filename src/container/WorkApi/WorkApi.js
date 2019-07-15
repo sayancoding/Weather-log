@@ -15,7 +15,7 @@ class WorkApi extends Component{
         list:{
             City:undefined,
             Country:undefined,
-            Temparature:undefined,
+            Temperature:undefined,
             Humidity:undefined,
             Description:undefined,
             'Wind Speed':undefined,
