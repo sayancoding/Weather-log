@@ -45,7 +45,7 @@ class WorkApi extends Component{
             if(data.cod === 200){
                 listRef.City=`${data.name} , ${data.sys.country}`
                 listRef.Country=data.sys.country
-                listRef.Temparature=`${(Math.round(data.main.temp)-273)} 'C`
+                listRef.Temperature=`${(Math.round(data.main.temp)-273)} 'C`
                 listRef.Humidity=`${data.main.humidity} %`
                 listRef.Description=`Now in ${data.weather[0].description}`
                 listRef['Wind Speed']=`${data.wind.speed} mt/s`
